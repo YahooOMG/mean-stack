@@ -7,19 +7,30 @@
   text-align: center;
 }
 
-.post-image {
-  width: 100%;
-  margin: 1rem 0;
-  img {
-    width: 100%;
-    box-shadow: 1px 1px 5px rgba(0,0,0, 0.5)
-  }
-}
-
 mat-spinner {
   margin: auto;
 }
 
-mat-expansion-panel-header{
+mat-expansion-panel-header {
   font-size: xx-large;
+}
+
+mat-panel-description {
+  display: flex;
+  flex: 1 1 auto;
+  .post-image {
+    margin: 1rem 0;
+    img {
+      height: 20rem;
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    }
+  }
+  p {
+    margin-left: 1rem;
+    word-break: break-word;
+  }
+}
+
+mat-paginator {
+  margin-top: 1rem;
 }
