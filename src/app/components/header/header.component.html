@@ -1,5 +1,5 @@
 <mat-toolbar color="primary">
-  <span><a routerLink="/">My Messages</a></span>
+  <span><a routerLink="/">My Memories <span *ngIf="userIsAuthenticated">({{username}})</span></a></span>
   <span class="spacer"></span>
   <ul>
     <li *ngIf="userIsAuthenticated">

@@ -16,7 +16,7 @@ export class PostsService {
   getPosts(pageSize: number, currentPage: number) {
     const queryParams = `?pagesize=${pageSize}&currentpage=${currentPage}`;
     this.http
-      .get<{ message: string; posts: any; maxPosts: number }>(
+      .get<{ message: string; posts: Post[]; maxPosts: number }>(
         this.apiUrl + '/posts' + queryParams
       )
       .subscribe(postsData => {

@@ -12,7 +12,7 @@ import { mimeType } from 'src/app/validators/mime-type.validator';
 })
 export class PostCreateComponent implements OnInit {
   newPost = 'NO CONTENT';
-  post: Post = { _id: null, title: null, content: null, imagePath: null };
+  post: Post = { _id: null, title: null, content: null, imagePath: null, creator: null };
   isLoading = false;
   postForm: FormGroup;
   imagePreview: string | ArrayBuffer;
@@ -76,7 +76,8 @@ export class PostCreateComponent implements OnInit {
       _id: this.postId,
       title: this.postForm.value.title,
       content: this.postForm.value.content,
-      imagePath: this.postForm.value.image
+      imagePath: this.postForm.value.image,
+      creator: null
     };
     if (this.mode === 'create') {
       this.postsService.addPost(post, this.postForm.value.image);
